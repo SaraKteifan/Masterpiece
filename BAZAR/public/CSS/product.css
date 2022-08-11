@@ -1,0 +1,21 @@
+body{
+    background-color: #E4EFE7;
+    font-family: 'Times New Roman', Times, serif;
+    color: #146356;
+    font-size: larger;
+}
+
+#shop-cat{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+#shop-cat span{
+    border: #146356 solid 2px;
+    padding: 0.5%;
+    width: 10%;
+    text-align: center;
+}
+#product-breadCrumb h5 {
+    margin: 3% 0;
+}

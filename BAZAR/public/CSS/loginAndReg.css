@@ -1,0 +1,33 @@
+body{
+    background-color: #E4EFE7;
+    font-family: 'Times New Roman', Times, serif;
+    color: #146356;
+}
+form{
+    margin: auto;
+    font-size: larger;
+}
+h1{
+    text-align: center;
+}
+#email,#name, #password, #password-confirm {
+    border: #146356 solid 1px;
+    border-radius: 0;
+}
+button{
+    background-color: #146356;
+    color: white;
+    border-radius: 0!important; /*Not sure*/
+    width: 40%;
+    margin-left: 30%;
+}
+p{
+    text-align: center;
+}
+p a{
+    color: #146356;
+    font-weight: bold;
+}
+a:hover{
+    color: #146356;
+}

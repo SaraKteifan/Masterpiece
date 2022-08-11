@@ -1,0 +1,22 @@
+body{
+    background-color: #E4EFE7;
+    font-family: 'Times New Roman', Times, serif;
+    color: #146356;
+    font-size: larger;
+}
+.main{
+    /* margin: auto; */
+    text-align: center;
+}
+.main h1{
+    margin-bottom: 10vh;
+}
+.sec{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+}
+.sec div img{
+    width: 100%;
+}
