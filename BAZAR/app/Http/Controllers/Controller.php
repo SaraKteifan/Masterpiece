@@ -22,5 +22,21 @@ class Controller extends BaseController
     {
         return view('layouts.product');
     }
+    public function about()
+    {
+        return view('layouts.about');
+    }
+    public function contact()
+    {
+        return view('layouts.contact');
+    }
+    public function uploadP1()
+    {
+        return view('layouts.uploadPiece1');
+    }
+    public function uploadP2()
+    {
+        return view('layouts.uploadPiece2');
+    }
 }
 

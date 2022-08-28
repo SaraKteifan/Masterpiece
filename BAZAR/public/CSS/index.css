@@ -23,12 +23,14 @@ body{
     color: #E4EFE7;
     border: 1.5px #146356 solid;
     width: 25%;
+    outline: none;
 }
 #hero-btn2{
     background-color: #E4EFE7;
     color: #146356;
     border: 1.5px #146356 solid;
     width: 25%;
+    outline: none;
 }
 #hero-img1{
     align-self: flex-end;
@@ -175,5 +177,8 @@ body{
     border: 1.5px #146356 solid;
     width: 50%;
     margin-left: 25%;
+    outline: none;
 }
-
+button:hover {
+    cursor: pointer;
+}

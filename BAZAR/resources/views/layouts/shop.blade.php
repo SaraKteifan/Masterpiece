@@ -13,7 +13,7 @@
         <span>Ovens</span>
         <span></span>
         <span>Antique</span>
-        <span>More</span>
+        <span>More <i class="fa-solid fa-caret-down"></i></span>
     </div>
 
     <div id="shop-grid">

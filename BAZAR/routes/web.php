@@ -21,6 +21,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [Controller::class, 'index']);
 Route::get('/shop', [Controller::class, 'shop']);
 Route::get('/product', [Controller::class, 'product']);
+Route::get('/about', [Controller::class, 'about']);
+Route::get('/contact', [Controller::class, 'contact']);
+Route::get('/uploadPiece1', [Controller::class, 'uploadP1']);
+Route::get('/uploadPiece2', [Controller::class, 'uploadP2']);
+
+
+
+
 
 
 

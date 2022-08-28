@@ -1,0 +1,38 @@
+body{
+    background-color: #E4EFE7;
+    font-family: 'Times New Roman', Times, serif;
+    color: #146356;
+    font-size: larger;
+}
+#contactUs h1{
+    margin: 5vh 0;
+    text-align: center;
+}
+#first-contact-flex, #second-contact-flex {
+    display: flex;
+    align-items: center;
+    margin: 2vh 0;
+}
+#send-btn{
+    background-color: #146356;
+    color: #E4EFE7;
+    border: 1.5px #146356 solid;
+    width: 25%;
+    position: relative;
+    left: 70%;
+    outline: none;
+}
+#send-btn:hover {
+    cursor: pointer;
+}
+#send-btn:active {
+    border: 1.5px #146356 solid;
+}
+#second-contact-flex {
+    gap:2%;
+}
+#contact-info{
+    padding: 3%;
+    border:  2px #146356 solid;
+    box-shadow: 5px 10px 5px #146356;
+}
