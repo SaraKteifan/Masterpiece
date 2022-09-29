@@ -3,16 +3,16 @@
         <div class="container">
             <div id="footerDiv">
                 <div>
-                    <img src="./Images/index/logo name.png" alt="logo text" id="log-text">
+                    <img src="./Images/index/logo-name.png" alt="logo text" id="log-text">
                 </div>
                 <div>
-                    <span>Terms of use</span>
-                    <span>About Us</span>
-                    <span>Contact US</span>
+                    <span><a href="">Terms of use</a></span>
+                    <span><a href="/about">About Us</a></span>
+                    <span><a href="contact">Contact US</a></span>
                 </div>
                 <div id="social-icons">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook-square"></i>
+                    <a href="https://www.instagram.com/bazar.amman/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/bazar.amman/"><i class="fa-brands fa-facebook-square"></i></a>
                 </div>
             </div>
         </div>

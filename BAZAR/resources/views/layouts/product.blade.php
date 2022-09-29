@@ -17,20 +17,20 @@
     </div>
     <div class="container">
         <div id="product-breadCrumb">
-            <h5> Shop / Closets / Dark wodden closet </h5>
+            <h5> Shop / {{$cat->name}} / {{$item->title}} </h5>
         </div>
         <div id="product-flex1">
             <div id="produc-image-slider" class="col-5">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100" src="./Images/index/Item1.jpg" alt="First slide">
+                        <img class="d-block w-100" src="/Images/products/{{$item->img1}}" alt="First slide">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="./Images/index/Item1.jpg" alt="Second slide">
+                        {{-- <img class="d-block w-100" src="./Images/index/Item1.jpg" alt="Second slide"> --}}
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="./Images/index/Item1.jpg" alt="Third slide">
+                        {{-- <img class="d-block w-100" src="./Images/index/Item1.jpg" alt="Third slide"> --}}
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -44,8 +44,8 @@
                   </div>
             </div>
             <div id="product-addToCart" class="col-6">
-                <h2><b>Dark wooden closet with four sections</b></h2>
-                <h3><b>JOD 25.00</b></h3>
+                <h2><b>{{$item->title}}</b></h2>
+                <h3><b>JOD {{$item->price}}</b></h3>
                 <h3>By:</h3>
                 <div id="product-user">
                   <div>
@@ -70,7 +70,7 @@
                   <i class="fa-solid fa-bookmark"></i>
                   <i class="fa-solid fa-link"></i>
                 </div>
-                <button>Add  to Cart </button>
+                <button><a href="/addToCart/{{$item->id}}">Add  to Cart </button>
                 </div>
             </div>
 

@@ -4,16 +4,13 @@ body{
     color: #146356;
     font-size: larger;
 }
-.upload-piece h1{
+h1{
     margin: 5vh 0;
     text-align: center;
 }
 hr {
     height: 2px;
     background-color: #146356;
-}
-.image-upload>input {
-    display: none;
 }
 button{
     background-color: #146356;
@@ -22,17 +19,4 @@ button{
     width: 25%;
     outline: none;
     cursor: pointer;
-}
-h5{
-    font-weight: bold;
-}
-.u-img{
-    width: 90%;
-    cursor: pointer;
-}
-#user-info-form{
-    text-align: center;    
-}
-label{
-    text-align: left;
 }

@@ -15,53 +15,22 @@
         <span>Antique</span>
         <span>More <i class="fa-solid fa-caret-down"></i></span>
     </div>
-
+    @if (session('msg'))
+    <div class="alert alert-success" role="alert">
+        {{session('msg')}}
+    </div>
+    @endif
     <div id="shop-grid">
+        @foreach ($items as $item)
         <div>
-            <img src="../Images/index/Item1.jpg" alt="Item"> 
-            <p>Dark wooden closet with 4 sections</p>
-            <p>JOD 25.00</p>
+            <a href="{{'product/'.$item->id}}"><img src="../Images/products/{{$item->img1}}" alt="Item"> 
+            <p>{{$item->title}}</p>
+            <p>JOD {{$item->price}}</p></a>
         </div>
-        <div>
-            <img src="../Images/index/Item2.png" alt="Item"> 
-            <p>Small electrical oven, white color</p>
-            <p>JOD 19.00</p>
-        </div>
-        <div>
-            <img src="../Images/index/Item3.jpg" alt="Item"> 
-            <p>Electrical oven, silver color</p>
-            <p>JOD 40.00</p>
-        </div>
-        <div>
-            <img src="../Images/index/Item1.jpg" alt="Item"> 
-            <p>Dark wooden closet with 4 sections</p>
-            <p>JOD 25.00</p>
-        </div>
-        <div>
-            <img src="../Images/index/Item2.png" alt="Item"> 
-            <p>Small electrical oven, white color</p>
-            <p>JOD 19.00</p>
-        </div>
-        <div>
-            <img src="../Images/index/Item3.jpg" alt="Item"> 
-            <p>Electrical oven, silver color</p>
-            <p>JOD 40.00</p>
-        </div>
-        <div>
-            <img src="../Images/index/Item1.jpg" alt="Item"> 
-            <p>Dark wooden closet with 4 sections</p>
-            <p>JOD 25.00</p>
-        </div>
-        <div>
-            <img src="../Images/index/Item2.png" alt="Item"> 
-            <p>Small electrical oven, white color</p>
-            <p>JOD 19.00</p>
-        </div>
-        <div>
-            <img src="../Images/index/Item3.jpg" alt="Item"> 
-            <p>Electrical oven, silver color</p>
-            <p>JOD 40.00</p>
-        </div>
+        @endforeach
+        
+       
+        
     </div>
 </div>
 @endsection

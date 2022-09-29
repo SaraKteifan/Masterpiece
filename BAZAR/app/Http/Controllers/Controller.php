@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Models\Products;
+use App\Models\Categories;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
@@ -16,11 +18,15 @@ class Controller extends BaseController
     }
     public function shop()
     {
-        return view('layouts.shop');
+        $items=Products::all();
+        return view('layouts.shop', compact('items'));
     }
-    public function product()
+    public function product($id)
     {
-        return view('layouts.product');
+        
+        $item=Products::find($id);
+        $cat=Categories::find($item->category_id);
+        return view('layouts.product', compact('item','cat'));
     }
     public function about()
     {
@@ -37,6 +43,25 @@ class Controller extends BaseController
     public function uploadP2()
     {
         return view('layouts.uploadPiece2');
+    }
+
+    public function cart(){
+        $items=[];
+        $items_id=$_SESSION["items"];
+        foreach ($items_id as $item) {
+            array_push($items, Products::find($item));
+        }
+        return view('layouts.cart',compact('items'));
+    }
+
+    public function checkout(){
+        $user = User::find(Auth::user()->id);
+        $items=[];
+        $items_id=$_SESSION["items"];
+        foreach ($items_id as $item) {
+            array_push($items, Products::find($item));
+        }
+        return view('layouts.checkout',compact('user','items'));
     }
 }
 

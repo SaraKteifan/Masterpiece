@@ -1,0 +1,17 @@
+body{
+    background-color: #E4EFE7;
+    font-family: 'Times New Roman', Times, serif;
+    color: #146356;
+    font-size: larger;
+}
+h1{
+    margin: 5vh 0;
+    text-align: center;
+}
+hr {
+    height: 2px;
+    background-color: #146356;
+}
+.r-input{
+    display: none;
+}

@@ -1,3 +1,10 @@
+@php
+    if(isset(Auth::user()->id)){
+      $sellPath= '/uploadPiece1';
+    }else{
+      $sellPath= route('register');
+    }
+@endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -25,6 +32,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- favicon --}}
+    <link rel="icon" href="{{ url('favicon.png') }}">
 </head>
 <body>
 
@@ -33,7 +42,7 @@
         <section class="navigation">
             <div class="nav-container">
               <div class="brand">
-                <a href="{{ url('/') }}"><img src="./Images/logo.png"></a>
+                <a href="{{ url('/') }}"><img src="./Images/logo.png" ></a>
               </div>
               <nav>
                 <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
@@ -45,7 +54,7 @@
                     <a href="/shop">Buy</a>
                   </li>
                   <li>
-                    <a href="#!">Sell</a>   
+                    <a href="{{$sellPath}}">Sell</a>   
                   </li>
                   <li>
                     <a href="#!"><i class="fa-solid fa-cart-shopping"></i></a>
